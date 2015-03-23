@@ -1,5 +1,68 @@
-<h2 id='title'>Welcome to Ember.js</h2>
-  {{textarea value = foo}}
+<center>
+  <h1>Markdown Editor</h1>
+</center>
 
-  {{foo}}
+<div style='padding-bottom:20%'>
+
+<div style='width:50%;float:left'>
+  <center>
+    <hr style='width:50%'><h2>Markdown</h2>
+    {{textarea value=foo placeholder='Enter your markdown text here' cols=100 rows=15}}
+  </center>
+</div>
+
+<div style='width:50%;float:right;word-wrap:break-word'>
+  <center>
+    <hr style='width:50%'><h2>Markup</h2>
+    <p>Your marked up text will appear below</p>
+    {{showdown-addon foo}}
+  </center>
+</div>
+</div>
+
+<div class="cheat-sheet" style="float:left;width:100%">
+  <center>
+    <h1>Simple Cheat Sheet (spaces are important)</h1><hr>
+    <h2>Headings:</h2>
+    h1: #  <br>
+    h2: ##  <br>
+    h2: ###  <br>
+    h4: ####  <br>
+    h5: #####  <br>
+    h6: ######  <br>
+
+    <hr style='width:50%'><h2>Horizontal Rules (hr):</h2>
+    ***  OR  ___  OR ---
+
+    <hr style='width:50%'><h2>Bold:</h2>
+    **(your text)**
+
+    <hr style='width:50%'><h2>Italics</h2>
+    _(your text)_
+
+    <hr style='width:50%'><h2>Strikethrough:</h2>
+    ~~(your text)~~
+
+    <hr style='width:50%'><h2>Bullets:</h2>
+    * (your text) OR - (your text) OR + (your text)
+
+    <hr style='width:50%'><h2>Numbered List:</h2>
+    (your number). (your text)<br>
+
+    <hr style='width:50%'><h2>Code:</h2>
+    `(your code)`
+
+    <hr style='width:50%'><h2>Code block:</h2>
+    ```(your code block)```
+
+    <hr style='width:50%'><h2>Image:</h2>
+    ![your image title] (your image url)
+
+    <hr style='width:50%'><h2>Link:</h2>
+    [your link title](your link url)
+
+    <hr style='width:50%'>
+    This is a simple cheat sheet. There are more markdown options, which you can look up :)
+  </center>
+  </div>
 {{outlet}}
